@@ -19,8 +19,8 @@ function preload(){
 function setup() {
   createCanvas(800,400);
   
-  FoodGroup = []
-  obstaclesGroup = []
+  FoodGroup = new Group()
+  obstaclesGroup = new Group()
 
   backgr=createSprite(0,0,800,400);
   backgr.addImage(backImage);
@@ -90,7 +90,7 @@ function fruits() {
   banana.addImage("b1",bananaImage);
   banana.velocityX= -6 ;
   banana.lifetime = 150;
-    FoodGroup=[banana]
+    FoodGroup.add(banana)
     banana.scale=0.07;
   banana.y=Math.round(random(320,560));
  // banana.debug=true;
@@ -109,7 +109,7 @@ function stones() {
     stone.velocityX = -6;
     stone.lifetime = 150;
     stone.scale = 0.09;
-    obstacleGroup=[stone]
+    obstacleGroup.add(banana)
    //stone.debug=true;
     stone.setCollider("circle",0,0,12)
   }
