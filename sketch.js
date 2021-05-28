@@ -108,8 +108,10 @@ backgr.velocityX=0;
 
 }
 
-    if(keyDown("space") ) {
-      player.velocityY = -12;
+console.log(player.y)
+
+    if(keyDown("space") && player.y>312) {
+      player.velocityY = -14;
     }
     player.velocityY = player.velocityY + 0.8;
   
